@@ -1,7 +1,5 @@
 //My server will live here
 
-//create a reference to the connect module and store a pointer 
-// to the connect module in the connect variable
 let express = require('express');
 
 //create an instance of the connect server
@@ -9,6 +7,9 @@ let app = express();
 
 //represents the port
 const port = 3000;
+
+/** * Get port from environment and store in Express. */
+let port = process.env.PORT || '3000'; app.set('port', port);
 
 //listen for requests on a specific port
 app.listen(port);
