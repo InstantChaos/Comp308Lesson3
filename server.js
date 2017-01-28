@@ -6,10 +6,12 @@ let express = require('express');
 let app = express();
 
 //represents the port
-const port = 3000;
+const localport = 3000;
 
 /** * Get port from environment and store in Express. */
-let port = process.env.PORT || '3000'; app.set('port', port);
+let port = process.env.PORT || localport;
+app.set('port', port);
+
 
 //listen for requests on a specific port
 app.listen(port);
